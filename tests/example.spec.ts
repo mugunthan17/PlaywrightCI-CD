@@ -1,17 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-test('has title - Should Pass',{tag:['@PlaywrightWithJenkins']}, async ({ page }) => {
+test('has title - Should Pass', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('has title - Should Fail',{tag:['@PlaywrightWithJenkins']}, async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Nonexistent/);
 });
 
 test('get started link', async ({ page }) => {
